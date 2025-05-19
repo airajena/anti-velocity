@@ -1,0 +1,74 @@
+<footer class="bg-primary text-white pt-5 pb-3 mt-5">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-4">
+        <h5 class="fw-bold">PetConnect</h5>
+        <p>NO ANIMAL LEFT BEHIND. <br/> Compassion in action for every life.</p>
+        <div>
+          <a href="#" class="me-2 text-white"><i class="fab fa-facebook fs-4"></i></a>
+          <a href="#" class="me-2 text-white"><i class="fab fa-twitter fs-4"></i></a>
+          <a href="#" class="me-2 text-white"><i class="fab fa-instagram fs-4"></i></a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <h6>Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="donate.html" class="text-white">Make a Donation</a></li>
+          <li><a href="adopt.html" class="text-white">Adopt a Pet</a></li>
+          <li><a href="register.html" class="text-white">Register a Pet</a></li>
+          <li><a href="faq.html" class="text-white">FAQ</a></li>
+          <li><a href="contact.html" class="text-white">Emergency Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h6>About</h6>
+        <ul class="list-unstyled">
+          <li><a href="about.html" class="text-white">Our Story</a></li>
+          <li><a href="team.html" class="text-white">Meet the Team</a></li>
+          <li><a href="testimonials.html" class="text-white">Success Stories</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6>Newsletter</h6>
+        <form>
+          <input type="email" placeholder="Your Email" class="form-control mb-2"/>
+          <button class="btn btn-accent btn-sm w-100">Subscribe</button>
+        </form>
+        <small class="d-block mt-3">© 2024 PetConnect • All rights reserved.</small>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Floating Chatbot Button -->
+<button id="chatbot-btn" class="btn btn-accent rounded-circle shadow-lg position-fixed end-0 bottom-0 m-4" style="z-index:1300;width:64px;height:64px;"><i class="fas fa-comment fa-2x"></i></button>
+<!-- Chatbot Widget -->
+<div id="chat-widget" class="position-fixed end-0 bottom-0 m-4 bg-white rounded-lg shadow-lg p-3" style="z-index:1301; width:340px; display:none;">
+  <div class="d-flex align-items-center justify-content-between mb-2">
+    <span class="fw-bold text-primary">🐾 PetConnect Chatbot</span>
+    <button id="close-chat" class="btn btn-link text-danger">✖</button>
+  </div>
+  <div style="max-height:180px; overflow-y:auto;font-size:0.97rem;">
+    <div><strong>Hi there! 👋</strong><br>How can I assist you today? <br>
+      <ul>
+        <li>Adoption help</li>
+        <li>Registering a stray/abandoned animal</li>
+        <li>Donation process</li>
+        <li>Emergency contact</li>
+      </ul>
+      <em>Try our FAQ or leave your question!</em>
+    </div>
+  </div>
+  <input type="text" class="form-control mt-2" placeholder="Type your message..."/>
+</div>
+<script>
+  // Show/hide chatbot
+  document.addEventListener('DOMContentLoaded', () => {
+    const chatBtn = document.getElementById('chatbot-btn');
+    const chatWidget = document.getElementById('chat-widget');
+    if(chatBtn && chatWidget){
+      chatWidget.style.display="none";
+      chatBtn.onclick = ()=>{ chatWidget.style.display="block"; chatBtn.style.display="none";};
+      document.getElementById('close-chat').onclick = ()=>{ chatWidget.style.display="none"; chatBtn.style.display="block"; };
+    }
+  });
+</script>

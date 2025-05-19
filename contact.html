@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetConnect | Contact Us</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f9fafb;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .bg-primary { background-color: #3C82F6 !important; }
+        .bg-accent { background-color: #FFA147 !important; }
+        .bg-success-light { background-color: #C7F9CC !important; }
+        .text-primary { color: #3C82F6 !important; }
+        .text-accent { color: #FFA147 !important; }
+        .text-success-light { color: #16A34A !important; }
+        .transition-all { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .navbar-shadow { box-shadow: 0 2px 12px rgba(60, 130, 246, 0.1); }
+        .card {
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+        .card:hover { transform: translateY(-5px); }
+        .navbar-nav .nav-link {
+            position: relative;
+            padding-bottom: 5px;
+        }
+        .navbar-nav .nav-link:hover::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #FFA147;
+        }
+        .hero-img {
+            border-radius: 1.5rem;
+            border: 4px solid #FFA147;
+            transform: rotate(3deg);
+            transition: transform 0.3s ease;
+        }
+        .hero-img:hover { transform: rotate(0deg); }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        img.lazy {
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+        }
+        img.lazy.loaded { opacity: 1; }
+        footer a:hover { color: #FFA147 !important; }
+        #chat-widget {
+            max-height: 400px;
+            transition: all 0.3s ease;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #C7F9CC;
+            color: #16A34A;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top navbar-shadow px-4">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="https://img.icons8.com/cotton/48/000000/pet-commands-train.png" width="40" alt="PetConnect Logo" class="me-2">
+                <span class="fw-bold text-primary fs-3">PetConnect</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item mx-2"><a class="nav-link text-dark" href="index.html">Home</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link text-dark" href="about.html">About Us</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link text-dark" href="adopt.html">Adopt</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link text-dark" href="register.html">Register Pet</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link text-dark" href="donate.html">Donate</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link text-dark" href="involved.html">Get Involved</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link text-dark active" href="contact.html">Contact</a></li>
+                    <li class="nav-item mx-2"><a class="btn btn-sm btn-outline-primary" href="#">Login</a></li>
+                    <li class="nav-item mx-2"><a class="btn btn-sm btn-accent text-white" href="#">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-tr from-blue-500 via-green-100 to-orange-100 py-5 position-relative" style="min-height: 60vh;">
+        <div class="container py-5 d-flex align-items-center justify-content-between flex-wrap">
+            <div class="col-lg-6 col-md-7 fade-in">
+                <h1 class="display-4 text-primary fw-bold mb-4">Get in Touch</h1>
+                <p class="fs-4 text-dark mb-5">Have questions or need help? We're here to assist you and our furry friends!</p>
+                <a href="#contact-form" class="btn btn-accent btn-lg transition-all shadow">Contact Us</a>
+            </div>
+            <div class="col-lg-5 col-md-5 mt-4 mt-md-0">
+                <img data-src="https://unsplash.com/photos/a-dog-standing-on-the-side-of-a-road-next-to-a-pile-of-dirt-es0xtlViwyU" class="img-fluid hero-img shadow-lg lazy" alt="Contact Pet" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form and Info -->
+    <section class="container py-5" id="contact-form">
+        <h2 class="fw-bold text-primary text-center mb-5 fade-in">Reach Out to Us</h2>
+        <div class="row g-5">
+            <div class="col-md-6 fade-in">
+                <div class="card p-4">
+                    <h4 class="text-primary mb-4">Send Us a Message</h4>
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Your Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Type of Inquiry</label>
+                            <select class="form-select">
+                                <option>Adoption</option>
+                                <option>Pet Registration</option>
+                                <option>Donations</option>
+                                <option>Volunteer Opportunities</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" rows="5" required></textarea>
+                        </div>
+                        <button class="btn btn-primary w-100 transition-all">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6 fade-in">
+                <div class="mb-4">
+                    <h4 class="text-accent fw-bold">Emergency Contact</h4>
+                    <p class="fs-3 text-danger fw-bold">+91 8686 000 911</p>
+                    <p class="text-secondary">Available 8AM–11PM, All Days</p>
+                </div>
+                <div class="mb-4">
+                    <h5 class="text-primary">Our Centers</h5>
+                    <ul class="list-unstyled text-secondary">
+                        <li>PetConnect Shelter: DLF Phase 2, Gurgaon</li>
+                        <li>Care Center: Vasant Vihar, Delhi</li>
+                    </ul>
+                </div>
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.615515567614!2d77.09529431508213!3d28.480987982477936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjiizI4JzQ4LjgiTiA3N8KwMDUnNDguMSJF!5e0!3m2!1sen!2sin!4v1634567890123" style="border:1px solid #ddd; width:100%; height:200px; border-radius:1rem;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="container py-5 bg-success-light">
+        <h2 class="fw-bold text-primary text-center mb-5 fade-in">Frequently Asked Questions</h2>
+        <div class="accordion fade-in" id="contactFaq">
+            <div class="accordion-item border-0 mb-3">
+                <h2 class="accordion-header" id="faqHeading1">
+                    <button class="accordion-button collapsed shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
+                        How do I adopt a pet?
+                    </button>
+                </h2>
+                <div id="faqCollapse1" class="accordion-collapse collapse" aria-labelledby="faqHeading1" data-bs-parent="#contactFaq">
+                    <div class="accordion-body">
+                        Visit our <a href="adopt.html" class="text-primary">Adopt</a> page, browse available pets, and submit an application. We’ll arrange a meet-and-greet and conduct a home check to ensure a good match.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item border-0 mb-3">
+                <h2 class="accordion-header" id="faqHeading2">
+                    <button class="accordion-button collapsed shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                        How can I volunteer with PetConnect?
+                    </button>
+                </h2>
+                <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#contactFaq">
+                    <div class="accordion-body">
+                        Check out our <a href="involved.html" class="text-primary">Get Involved</a> page for volunteer opportunities. You can also contact us directly to learn about current needs.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item border-0 mb-3">
+                <h2 class="accordion-header" id="faqHeading3">
+                    <button class="accordion-button collapsed shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                        What should I do if I find a stray animal?
+                    </button>
+                </h2>
+                <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#contactFaq">
+                    <div class="accordion-body">
+                        Call our emergency line at +91 8686 000 911 or use our <a href="register.html" class="text-primary">Register Pet</a> form to report the animal. We’ll guide you on next steps.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5 fade-in">
+            <a href="faq.html" class="btn btn-outline-primary">View All FAQs</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">PetConnect</h5>
+                    <p class="text-white-75">No Animal Left Behind. Compassion in action for every life.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="fab fa-facebook-f fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="donate.html" class="text-white text-decoration-none">Make a Donation</a></li>
+                        <li><a href="adopt.html" class="text-white text-decoration-none">Adopt a Pet</a></li>
+                        <li><a href="register.html" class="text-white text-decoration-none">Register a Pet</a></li>
+                        <li><a href="faq.html" class="text-white text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="fw-bold mb-3">About</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white text-decoration-none">Our Story</a></li>
+                        <li><a href="team.html" class="text-white text-decoration-none">Meet the Team</a></li>
+                        <li><a href="testimonials.html" class="text-white text-decoration-none">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">Newsletter</h6>
+                    <form>
+                        <div class="input-group">
+                            <input type="email" placeholder="Your Email" class="form-control">
+                            <button class="btn btn-accent btn-sm" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                    <p class="mt-3 small text-white-75">Contact: <a href="mailto:info@petconnect.org" class="text-white">info@petconnect.org</a></p>
+                    <p class="small text-white-75">Phone: (123) 456-7890</p>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <small>© 2025 PetConnect • All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Chatbot Button -->
+    <button id="chatbot-btn" class="btn btn-accent rounded-circle shadow-lg position-fixed end-0 bottom-0 m-4" style="z-index:1300;width:60px;height:60px;">
+        <i class="fas fa-comment fa-2x"></i>
+    </button>
+    <!-- Chatbot Widget -->
+    <div id="chat-widget" class="position-fixed end-0 bottom-0 m-4 bg-white rounded-lg shadow-lg p-4" style="z-index:1301; width:360px; display:none;">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+            <span class="fw-bold text-primary">🐾 PetConnect Chatbot</span>
+            <button id="close-chat" class="btn btn-link text-danger p-0">✖</button>
+        </div>
+        <div style="max-height:240px; overflow-y:auto; font-size:0.95rem;" id="chat-messages">
+            <div>
+                <strong>Hi there! 👋</strong><br>
+                How can I assist you today?<br>
+                <ul class="list-unstyled mt-2">
+                    <li><a href="adopt.html" class="text-primary">Adoption help</a></li>
+                    <li><a href="register.html" class="text-primary">Register a stray/abandoned animal</a></li>
+                    <li><a href="donate.html" class="text-primary">Donation process</a></li>
+                    <li><a href="contact.html" class="text-primary">Emergency contact</a></li>
+                </ul>
+                <em>Try our FAQ or leave your question!</em>
+            </div>
+        </div>
+        <div class="input-group mt-3">
+            <input type="text" id="chat-input" class="form-control" placeholder="Type your message...">
+            <button onclick="sendMessage()" class="btn btn-accent">Send</button>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Chatbot functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const chatBtn = document.getElementById('chatbot-btn');
+            const chatWidget = document.getElementById('chat-widget');
+            const closeChat = document.getElementById('close-chat');
+            if (chatBtn && chatWidget && closeChat) {
+                chatWidget.style.display = 'none';
+                chatBtn.onclick = () => {
+                    chatWidget.style.display = 'block';
+                    chatBtn.style.display = 'none';
+                };
+                closeChat.onclick = () => {
+                    chatWidget.style.display = 'none';
+                    chatBtn.style.display = 'block';
+                };
+            }
+
+            // Lazy loading images
+            const lazyImages = document.querySelectorAll('img.lazy');
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.add('loaded');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+            lazyImages.forEach(img => imageObserver.observe(img));
+
+            // Fade-in animations
+            const fadeIns = document.querySelectorAll('.fade-in');
+            const fadeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            fadeIns.forEach(el => fadeObserver.observe(el));
+
+            // Navbar collapse on link click (mobile)
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    const navbar = document.getElementById('navbarNav');
+                    if (navbar.classList.contains('show')) {
+                        bootstrap.Collapse.getInstance(navbar).hide();
+                    }
+                });
+            });
+
+            // Form submission (placeholder)
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    alert('Message sent! We’ll get back to you soon.');
+                });
+            });
+        });
+
+        // Simple chatbot response
+        function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const messages = document.getElementById('chat-messages');
+            const message = input.value.trim();
+            if (message) {
+                messages.innerHTML += `<div class="mt-2"><strong>You:</strong> ${message}</div>`;
+                setTimeout(() => {
+                    messages.innerHTML += `<div class="mt-2"><strong>Bot:</strong> Thanks for your message! How can I assist you further?</div>`;
+                    messages.scrollTop = messages.scrollHeight;
+                }, 500);
+                input.value = '';
+            }
+        }
+    </script>
+</body>
+</html>
